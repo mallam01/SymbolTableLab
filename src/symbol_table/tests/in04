@@ -1,0 +1,15 @@
+
+class c1
+class c2
+
+new_scope c1
+variable int v1
+lookup1 v1
+end_scope
+lookup2 c1.v1
+new_scope c2
+variable float v1
+method int m1()
+method int v1()
+end_scope
+

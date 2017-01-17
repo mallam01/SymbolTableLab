@@ -1,0 +1,106 @@
+Successful command 2: class  c1
+Successful command 3: class  c2
+Successful command 5: new_scope c1
+The new scope is 
+class c1 {
+}
+
+Successful command 6: variable  int v1
+Successful command 7: lookup1  v1
+int v1
+Successful command 8: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+}
+
+}
+
+Successful command 10: lookup2  c1 . v1
+int v1
+Successful command 12: new_scope c2
+The new scope is 
+class c2 {
+}
+
+Successful command 13: variable  int v1
+Successful command 15: method int m1(char c);
+
+Successful command 16: new_scope m1
+The new scope is 
+int m1(char c);
+
+Successful command 17: new_block 
+Successful command 18: variable  float c2
+Successful command 19: enclosing_method 
+int m1(char c);
+
+Successful command 20: lookup1  c
+char c
+Successful command 21: new_block 
+Successful command 22: enclosing_method 
+int m1(char c);
+
+Successful command 23: lookup1  c2
+float c2
+Successful command 24: end_scope 
+Leaving scope 
+{
+
+}
+
+The new scope is 
+{
+float c2;
+
+}
+
+Successful command 25: end_scope 
+Leaving scope 
+{
+float c2;
+
+}
+
+The new scope is 
+int m1(char c);
+
+Unsuccessful command 26: method  void m2 () -- method declarations are not allowed in this scope
+Unsuccessful command 27: class  c3 -- class declarations are not allowed in this scope
+Successful command 28: end_scope 
+Leaving scope 
+int m1(char c);
+
+The new scope is 
+class c2 {
+int v1;
+int m1(char c);
+}
+
+Successful command 30: end_scope 
+Leaving scope 
+class c2 {
+int v1;
+int m1(char c);
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+int v1;
+int m1(char c);
+}
+
+}
+

@@ -1,0 +1,35 @@
+Successful command 2: class  c1
+Successful command 3: class  c2
+Successful command 5: new_scope c1
+The new scope is 
+class c1 {
+}
+
+Successful command 6: variable  int v1
+Successful command 8: print_symtab 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+}
+
+}
+
+Successful command 10: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+}
+
+}
+
+Unsuccessful command 12: end_scope  -- cannot leave Global Scope

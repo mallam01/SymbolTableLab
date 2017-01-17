@@ -1,0 +1,202 @@
+Successful command 2: class  c1
+Successful command 3: class  c2
+Successful command 5: new_scope c1
+The new scope is 
+class c1 {
+}
+
+Successful command 6: variable  int v1
+Successful command 7: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+}
+
+}
+
+Unsuccessful command 9: lookup1  v1 -- unknown identifier 
+Successful command 10: lookup2  c1 . v1
+int v1
+Successful command 12: new_scope c1
+The new scope is 
+class c1 {
+int v1;
+}
+
+Successful command 14: method int m1(char c);
+
+Successful command 15: new_scope m1
+The new scope is 
+int m1(char c);
+
+Successful command 16: lookup1  c
+char c
+Unsuccessful command 17: lookup1  v2 -- unknown identifier 
+Successful command 18: new_block 
+Successful command 19: variable  char v2
+Successful command 20: lookup1  v2
+char v2
+Successful command 21: enclosing_method 
+int m1(char c);
+
+Successful command 22: end_scope 
+Leaving scope 
+{
+char v2;
+
+}
+
+The new scope is 
+int m1(char c);
+
+Successful command 23: new_block 
+Unsuccessful command 24: lookup1  v2 -- unknown identifier 
+Successful command 25: end_scope 
+Leaving scope 
+{
+
+}
+
+The new scope is 
+int m1(char c);
+
+Successful command 26: end_scope 
+Leaving scope 
+int m1(char c);
+
+The new scope is 
+class c1 {
+int v1;
+int m1(char c);
+}
+
+Successful command 28: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+int m1(char c);
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+int m1(char c);
+}
+class c2 {
+}
+
+}
+
+Successful command 30: new_scope c2
+The new scope is 
+class c2 {
+}
+
+Successful command 32: variable  string v2
+Successful command 34: method void m2(char c, string i);
+
+Successful command 35: new_scope m2
+The new scope is 
+void m2(char c, string i);
+
+Successful command 36: lookup1  i
+string i
+Successful command 37: new_block 
+Successful command 38: lookup1  v2
+string v2
+Successful command 39: variable  int v2
+Successful command 40: lookup1  v2
+int v2
+Successful command 41: new_block 
+Successful command 42: lookup1  v2
+int v2
+Successful command 43: variable  int v1
+Successful command 44: variable  char v2
+Successful command 45: lookup1  v2
+char v2
+Successful command 46: lookup2  c2 . v2
+string v2
+Successful command 47: lookup2  c2 . m2
+void m2(char c, string i);
+
+Unsuccessful command 48: lookup2  c1 . v2 -- unknown identifier v2
+Successful command 49: enclosing_method 
+void m2(char c, string i);
+
+Successful command 50: end_scope 
+Leaving scope 
+{
+int v1;
+char v2;
+
+}
+
+The new scope is 
+{
+int v2;
+
+}
+
+Unsuccessful command 51: class  c5 -- class declarations are not allowed in this scope
+Unsuccessful command 52: lookup1  c5 -- unknown identifier 
+Successful command 53: end_scope 
+Leaving scope 
+{
+int v2;
+
+}
+
+The new scope is 
+void m2(char c, string i);
+
+Successful command 54: end_scope 
+Leaving scope 
+void m2(char c, string i);
+
+The new scope is 
+class c2 {
+string v2;
+void m2(char c, string i);
+}
+
+Unsuccessful command 56: lookup2  c1 . m2 -- unknown identifier m2
+Successful command 57: lookup2  c2 . m2
+void m2(char c, string i);
+
+Successful command 59: method int p(char c);
+
+Unsuccessful command 60: lookup2  p . c -- unknown identifier c
+Successful command 61: new_scope p
+The new scope is 
+int p(char c);
+
+Successful command 62: lookup1  c
+char c
+Successful command 63: lookup1  p
+int p(char c);
+
+Successful command 64: enclosing_method 
+int p(char c);
+
+Successful command 65: end_scope 
+Leaving scope 
+int p(char c);
+
+The new scope is 
+class c2 {
+string v2;
+void m2(char c, string i);
+int p(char c);
+}
+
+Successful command 66: variable  int dup
+Unsuccessful command 67: method  int dup () -- redeclaration of identifier dup

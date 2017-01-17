@@ -1,0 +1,68 @@
+
+class c1
+class c2
+
+new_scope c1
+variable int v1
+end_scope
+
+lookup1 v1
+lookup2 c1.v1
+
+new_scope c1
+
+method int m1(char c)
+new_scope m1
+lookup1 c
+lookup1 v2
+new_block
+variable char v2
+lookup1 v2
+enclosing_method
+end_scope
+new_block
+lookup1 v2
+end_scope
+end_scope
+
+end_scope
+
+new_scope c2
+
+variable string v2
+
+method void m2(char c, string i)
+new_scope m2
+lookup1 i
+new_block
+lookup1 v2
+variable int v2
+lookup1 v2
+new_block
+lookup1 v2
+variable int v1
+variable char v2
+lookup1 v2
+lookup2 c2.v2
+lookup2 c2.m2
+lookup2 c1.v2
+enclosing_method
+end_scope
+class c5
+lookup1 c5
+end_scope
+end_scope
+
+lookup2 c1.m2
+lookup2 c2.m2
+
+method int p(char c)
+lookup2 p.c
+new_scope p
+lookup1 c
+lookup1 p
+enclosing_method
+end_scope
+variable int dup
+method int dup(char i)
+

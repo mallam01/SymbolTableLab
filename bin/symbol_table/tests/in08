@@ -1,0 +1,32 @@
+class c1
+new_scope c1
+variable string s
+method int m( )
+new_scope m
+new_block
+variable string s
+end_scope
+end_scope
+
+method void n( )
+new_scope n
+new_block
+variable char m
+end_scope
+end_scope
+
+end_scope
+
+class c2
+new_scope c2
+method float f(float x, char c)
+new_scope f
+new_block
+new_block
+variable int i
+end_scope
+end_scope
+end_scope
+
+end_scope
+

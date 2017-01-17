@@ -1,0 +1,29 @@
+Successful command 2: class  c1
+Successful command 3: class  c2
+Successful command 5: new_scope c1
+The new scope is 
+class c1 {
+}
+
+Successful command 6: variable  int v1
+Successful command 7: lookup1  v1
+int v1
+Successful command 8: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+}
+
+}
+
+Unsuccessful command 9: lookup1  v1 -- unknown identifier 
+Successful command 10: lookup2  c1 . v1
+int v1

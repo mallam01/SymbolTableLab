@@ -1,0 +1,11 @@
+Successful command 2: class  c1
+Successful command 3: class  c2
+Successful command 5: print_symtab 
+Global Scope: {
+class c1 {
+}
+class c2 {
+}
+
+}
+

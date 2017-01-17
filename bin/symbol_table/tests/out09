@@ -1,0 +1,167 @@
+Successful command 2: class  C1
+Successful command 3: new_scope C1
+The new scope is 
+class C1 {
+}
+
+Successful command 4: variable  int s
+Successful command 6: method int m(char t);
+
+Successful command 7: new_scope m
+The new scope is 
+int m(char t);
+
+Successful command 8: new_block 
+Successful command 9: variable  string s
+Successful command 10: end_scope 
+Leaving scope 
+{
+string s;
+
+}
+
+The new scope is 
+int m(char t);
+
+Successful command 11: end_scope 
+Leaving scope 
+int m(char t);
+
+The new scope is 
+class C1 {
+int s;
+int m(char t);
+}
+
+Successful command 13: method void n(int x, int y);
+
+Successful command 14: new_scope n
+The new scope is 
+void n(int x, int y);
+
+Successful command 15: new_block 
+Successful command 16: variable  char m
+Successful command 17: end_scope 
+Leaving scope 
+{
+char m;
+
+}
+
+The new scope is 
+void n(int x, int y);
+
+Successful command 18: end_scope 
+Leaving scope 
+void n(int x, int y);
+
+The new scope is 
+class C1 {
+int s;
+int m(char t);
+void n(int x, int y);
+}
+
+Successful command 20: end_scope 
+Leaving scope 
+class C1 {
+int s;
+int m(char t);
+void n(int x, int y);
+}
+
+The new scope is 
+Global Scope: {
+class C1 {
+int s;
+int m(char t);
+void n(int x, int y);
+}
+
+}
+
+Successful command 22: class  C2
+Successful command 23: new_scope C2
+The new scope is 
+class C2 {
+}
+
+Successful command 24: variable  int z
+Successful command 26: method float p(int x, char c);
+
+Successful command 27: new_scope p
+The new scope is 
+float p(int x, char c);
+
+Successful command 28: new_block 
+Successful command 29: variable  string q
+Successful command 30: lookup1  x
+int x
+Successful command 32: new_block 
+Successful command 33: variable  int i
+Successful command 34: lookup1  z
+int z
+Successful command 35: lookup1  x
+int x
+Successful command 36: lookup2  C1 . s
+int s
+Successful command 37: lookup1  x
+int x
+Successful command 38: lookup1  x
+int x
+Successful command 39: lookup1  i
+int i
+Successful command 40: end_scope 
+Leaving scope 
+{
+int i;
+
+}
+
+The new scope is 
+{
+string q;
+
+}
+
+Successful command 42: end_scope 
+Leaving scope 
+{
+string q;
+
+}
+
+The new scope is 
+float p(int x, char c);
+
+Successful command 43: end_scope 
+Leaving scope 
+float p(int x, char c);
+
+The new scope is 
+class C2 {
+int z;
+float p(int x, char c);
+}
+
+Successful command 45: end_scope 
+Leaving scope 
+class C2 {
+int z;
+float p(int x, char c);
+}
+
+The new scope is 
+Global Scope: {
+class C1 {
+int s;
+int m(char t);
+void n(int x, int y);
+}
+class C2 {
+int z;
+float p(int x, char c);
+}
+
+}
+

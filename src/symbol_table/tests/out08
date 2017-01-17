@@ -1,0 +1,146 @@
+Successful command 1: class  c1
+Successful command 2: new_scope c1
+The new scope is 
+class c1 {
+}
+
+Successful command 3: variable  string s
+Successful command 4: method int m();
+
+Successful command 5: new_scope m
+The new scope is 
+int m();
+
+Successful command 6: new_block 
+Successful command 7: variable  string s
+Successful command 8: end_scope 
+Leaving scope 
+{
+string s;
+
+}
+
+The new scope is 
+int m();
+
+Successful command 9: end_scope 
+Leaving scope 
+int m();
+
+The new scope is 
+class c1 {
+string s;
+int m();
+}
+
+Successful command 11: method void n();
+
+Successful command 12: new_scope n
+The new scope is 
+void n();
+
+Successful command 13: new_block 
+Successful command 14: variable  char m
+Successful command 15: end_scope 
+Leaving scope 
+{
+char m;
+
+}
+
+The new scope is 
+void n();
+
+Successful command 16: end_scope 
+Leaving scope 
+void n();
+
+The new scope is 
+class c1 {
+string s;
+int m();
+void n();
+}
+
+Successful command 18: end_scope 
+Leaving scope 
+class c1 {
+string s;
+int m();
+void n();
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+string s;
+int m();
+void n();
+}
+
+}
+
+Successful command 20: class  c2
+Successful command 21: new_scope c2
+The new scope is 
+class c2 {
+}
+
+Successful command 22: method float f(float x, char c);
+
+Successful command 23: new_scope f
+The new scope is 
+float f(float x, char c);
+
+Successful command 24: new_block 
+Successful command 25: new_block 
+Successful command 26: variable  int i
+Successful command 27: end_scope 
+Leaving scope 
+{
+int i;
+
+}
+
+The new scope is 
+{
+
+}
+
+Successful command 28: end_scope 
+Leaving scope 
+{
+
+}
+
+The new scope is 
+float f(float x, char c);
+
+Successful command 29: end_scope 
+Leaving scope 
+float f(float x, char c);
+
+The new scope is 
+class c2 {
+float f(float x, char c);
+}
+
+Successful command 31: end_scope 
+Leaving scope 
+class c2 {
+float f(float x, char c);
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+string s;
+int m();
+void n();
+}
+class c2 {
+float f(float x, char c);
+}
+
+}
+

@@ -1,0 +1,46 @@
+
+class C1
+new_scope C1
+variable int s
+
+method int m (char t)
+new_scope m
+new_block
+variable string s
+end_scope
+end_scope
+
+method void n (int x, int y)
+new_scope n
+new_block
+variable char m
+end_scope
+end_scope
+
+end_scope
+
+class C2
+new_scope C2
+variable int z
+
+method float p (int x, char c)
+new_scope p
+new_block
+variable string q
+lookup1  x
+
+new_block
+variable int i
+lookup1  z
+lookup1  x
+lookup2  C1.s
+lookup1  x
+lookup1  x
+lookup1  i
+end_scope
+
+end_scope
+end_scope
+
+end_scope
+

@@ -1,0 +1,121 @@
+Successful command 2: class  c1
+Successful command 3: class  c2
+Successful command 5: new_scope c1
+The new scope is 
+class c1 {
+}
+
+Successful command 6: variable  int v1
+Successful command 7: lookup1  v1
+int v1
+Successful command 8: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+}
+
+}
+
+Unsuccessful command 10: lookup1  v1 -- unknown identifier 
+Successful command 11: lookup2  c1 . v1
+int v1
+Successful command 13: new_scope c1
+The new scope is 
+class c1 {
+int v1;
+}
+
+Unsuccessful command 15: variable  string v1 -- redeclaration of identifier v1
+Successful command 17: method int m1(char c);
+
+Successful command 18: new_scope m1
+The new scope is 
+int m1(char c);
+
+Successful command 19: lookup1  c
+char c
+Successful command 20: end_scope 
+Leaving scope 
+int m1(char c);
+
+The new scope is 
+class c1 {
+int v1;
+int m1(char c);
+}
+
+Successful command 22: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+int m1(char c);
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+int m1(char c);
+}
+class c2 {
+}
+
+}
+
+Successful command 24: new_scope c2
+The new scope is 
+class c2 {
+}
+
+Successful command 25: variable  string v1
+Successful command 27: method void m2(char c, string s, float f);
+
+Successful command 28: new_scope m2
+The new scope is 
+void m2(char c, string s, float f);
+
+Successful command 29: lookup1  s
+string s
+Unsuccessful command 30: class  c3 -- class declarations are not allowed in this scope
+Successful command 31: end_scope 
+Leaving scope 
+void m2(char c, string s, float f);
+
+The new scope is 
+class c2 {
+string v1;
+void m2(char c, string s, float f);
+}
+
+Unsuccessful command 33: lookup2  c1 . m2 -- unknown identifier m2
+Successful command 34: lookup2  c2 . m2
+void m2(char c, string s, float f);
+
+Successful command 36: end_scope 
+Leaving scope 
+class c2 {
+string v1;
+void m2(char c, string s, float f);
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+int m1(char c);
+}
+class c2 {
+string v1;
+void m2(char c, string s, float f);
+}
+
+}
+

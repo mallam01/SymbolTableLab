@@ -1,0 +1,56 @@
+Successful command 2: class  c1
+Successful command 3: class  c2
+Successful command 5: new_scope c1
+The new scope is 
+class c1 {
+}
+
+Successful command 6: variable  int v1
+Successful command 7: lookup1  v1
+int v1
+Successful command 8: end_scope 
+Leaving scope 
+class c1 {
+int v1;
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+}
+
+}
+
+Successful command 9: lookup2  c1 . v1
+int v1
+Successful command 10: new_scope c2
+The new scope is 
+class c2 {
+}
+
+Successful command 11: variable  float v1
+Successful command 12: method int m1();
+
+Unsuccessful command 13: method  int v1 () -- redeclaration of identifier v1
+Successful command 14: end_scope 
+Leaving scope 
+class c2 {
+float v1;
+int m1();
+}
+
+The new scope is 
+Global Scope: {
+class c1 {
+int v1;
+}
+class c2 {
+float v1;
+int m1();
+}
+
+}
+
